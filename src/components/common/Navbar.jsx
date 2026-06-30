@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "../../assets/RedMoonTechnology1.png";
+const logo = new URL("../../assets/RedMoonTechnology1.png", import.meta.url).href;
 const links = [
   "Home",
   "About",

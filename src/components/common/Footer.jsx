@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/RedMoonTechnology1.png";
+const logo = new URL("../../assets/RedMoonTechnology1.png", import.meta.url).href;
 
 export default function Footer() {
   return (
