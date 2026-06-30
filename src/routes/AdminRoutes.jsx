@@ -1,0 +1,2 @@
+import {Navigate,Outlet} from 'react-router-dom';import {useAuth} from '../context/AuthContext';import AdminSidebar from '../components/admin/AdminSidebar';import AdminNavbar from '../components/admin/AdminNavbar';
+export default function AdminRoutes(){const {admin,loading}=useAuth();if(loading)return <div className="p-10">Loading...</div>; if(!admin)return <Navigate to="/admin/login"/>;return <div className="flex bg-moon"><AdminSidebar/><main className="min-h-screen flex-1 p-6"><AdminNavbar/><Outlet/></main></div>}

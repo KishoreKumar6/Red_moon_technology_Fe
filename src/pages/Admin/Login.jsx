@@ -1,0 +1,6 @@
+import {useState} from 'react';
+import {Link,Navigate} from 'react-router-dom';
+import toast from 'react-hot-toast';
+import {useAuth} from '../../context/AuthContext';
+
+export default function Login(){const {admin,login}=useAuth();const [form,setForm]=useState({email:'admin@redmoontechnology.com',password:'Admin@12345'});if(admin)return <Navigate to="/admin"/>;const submit=async(e)=>{e.preventDefault();try{await login(form);toast.success('Login successful')}catch{toast.error('Invalid login')}};return <main className="flex min-h-screen items-center justify-center bg-moon p-5"><form onSubmit={submit} className="glass w-full max-w-md rounded-[2rem] p-8 shadow-glow"><Link to="/" className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300 transition hover:bg-white/10">← Back to site</Link><h1 className="mt-6 text-3xl font-black">Admin Login</h1><p className="mt-2 text-slate-400">Red Moon Technology</p><input className="input mt-6" value={form.email} onChange={e=>setForm({...form,email:e.target.value})}/><input className="input mt-4" type="password" value={form.password} onChange={e=>setForm({...form,password:e.target.value})}/><button className="btn btn-primary mt-6 w-full">Login</button></form></main>}

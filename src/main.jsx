@@ -1,0 +1,6 @@
+import React from 'react';import ReactDOM from 'react-dom/client';import {BrowserRouter} from 'react-router-dom';import {Toaster} from 'react-hot-toast';import {AuthProvider} from './context/AuthContext';import App from './App';import './index.css';import logo from './assets/RedMoonTechnology1.png';
+document.title='Red Moon Technology | Premium IT Services & Digital Solutions';
+let meta=document.querySelector('meta[name="description"]'); if(!meta){meta=document.createElement('meta');meta.name='description';document.head.appendChild(meta)} meta.content='Red Moon Technology provides premium website development, mobile apps, SEO, digital marketing, branding, UI/UX and automation solutions.';
+let icon=document.querySelector('link[rel="icon"]'); if(!icon){icon=document.createElement('link');icon.rel='icon';document.head.appendChild(icon)} icon.type='image/png'; icon.href=logo;
+let appleIcon=document.querySelector('link[rel="apple-touch-icon"]'); if(!appleIcon){appleIcon=document.createElement('link');appleIcon.rel='apple-touch-icon';document.head.appendChild(appleIcon)} appleIcon.href=logo;
+ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode><BrowserRouter><AuthProvider><App/><Toaster position="top-right"/></AuthProvider></BrowserRouter></React.StrictMode>);

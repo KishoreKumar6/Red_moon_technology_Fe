@@ -1,0 +1,1 @@
+import api from './api'; export const getTestimonials=()=>api.get('/testimonials'); export const getAdminTestimonials=()=>api.get('/testimonials?admin=true'); export const createTestimonial=(d)=>api.post('/testimonials',d); export const updateTestimonial=(id,d)=>api.put(`/testimonials/${id}`,d); export const deleteTestimonial=(id)=>api.delete(`/testimonials/${id}`);

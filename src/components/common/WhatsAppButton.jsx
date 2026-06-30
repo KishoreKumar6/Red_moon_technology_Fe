@@ -1,0 +1,1 @@
+export default function WhatsAppButton(){const n=import.meta.env.VITE_WHATSAPP_NUMBER||'919999999999';return <a className="fixed bottom-6 right-6 z-50 rounded-full bg-green-500 px-5 py-4 font-bold text-white shadow-glow" href={`https://wa.me/${n}`} target="_blank">WhatsApp</a>}

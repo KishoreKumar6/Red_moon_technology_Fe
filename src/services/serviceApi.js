@@ -1,0 +1,1 @@
+import api from './api'; export const getServices=()=>api.get('/services'); export const getAdminServices=()=>api.get('/services?admin=true'); export const createService=(d)=>api.post('/services',d); export const updateService=(id,d)=>api.put(`/services/${id}`,d); export const deleteService=(id)=>api.delete(`/services/${id}`);

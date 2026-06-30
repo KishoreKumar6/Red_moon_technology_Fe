@@ -1,0 +1,1 @@
+import api from './api'; export const getPortfolio=()=>api.get('/portfolio'); export const getAdminPortfolio=()=>api.get('/portfolio?admin=true'); export const createPortfolio=(d)=>api.post('/portfolio',d); export const updatePortfolio=(id,d)=>api.put(`/portfolio/${id}`,d); export const deletePortfolio=(id)=>api.delete(`/portfolio/${id}`);
