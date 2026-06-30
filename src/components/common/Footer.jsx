@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/Redmoontechnology1.png";
+import logo from "../../assets/RedMoonTechnology1.png";
 
 export default function Footer() {
   return (
