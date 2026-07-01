@@ -2,9 +2,16 @@ import { Link } from "react-router-dom";
 const logo = new URL("../../assets/RedMoonTechnology1.png", import.meta.url).href;
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="border-t border-white/10 bg-black/40 py-10">
-      <div className="containerx grid gap-8 md:grid-cols-3">
+    <footer
+      className="border-t border-white/10 bg-black/40 py-10"
+      onClick={scrollToTop}
+    >
+      <div className="containerx grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <div>
           <Link
             to="/"
@@ -14,12 +21,11 @@ export default function Footer() {
             <img
               src={logo}
               alt="Red Moon Technology"
-              className="h-24 animate-bounce w-auto object-fill"
+              className="h-16 w-auto animate-bounce object-contain sm:h-20"
             />
           </Link>
           <p className="mt-3 text-slate-400">
-            Premium IT services, websites, apps, SEO and digital growth
-            solutions.
+            Premium IT services, websites, apps, SEO and digital marketing.
           </p>
         </div>
         <div>
@@ -37,8 +43,7 @@ export default function Footer() {
             <br />
             Phone: +91 962 962 1359
             <br />
-            Location: Red Moon Technology
-MBT Road, Navalpure, Ranipet - 632401
+            Location: Red Moon Technology, MBT Road, Navalpure, Ranipet - 632401
           </p>
         </div>
       </div>
